@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ "master" ]
 
+env:
+  BASE_URL: ${{ secrets.BASE_URL }}
+
 jobs:
   build:
 
@@ -20,9 +23,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: gradle
-
-    - name: Set env
-      run: echo "BASE_URL=${{ secrets.BASE_URL }}" >> ${GITHUB_ENV}
 
     - name: Print BASE_URL
       run: echo "BASE_URL is $BASE_URL"
