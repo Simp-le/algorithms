@@ -24,6 +24,9 @@ jobs:
     - name: Set BASE_URL secret as an environment variable
       run: echo "BASE_URL=${{ secrets.BASE_URL }}" >> $GITHUB_ENV
 
+    - name: Print BASE_URL
+      run: echo "BASE_URL is $BASE_URL"
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       
