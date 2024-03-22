@@ -22,7 +22,7 @@ jobs:
         cache: gradle
 
     - name: Set env
-      run: echo "BASE_URL=${{ secrets.BASE_URL }}" >> $GITHUB_ENV
+      run: echo "BASE_URL=${{ secrets.BASE_URL }}" >> ${GITHUB_ENV}
 
     - name: Print BASE_URL
       run: echo "BASE_URL is $BASE_URL"
@@ -31,7 +31,7 @@ jobs:
       run: chmod +x gradlew
       
     - name: Build with Gradle
-      run: ./gradlew assembleRelease -PBASE_URL=${{ secrets.BASE_URL }}
+      run: ./gradlew assembleRelease
 
     - name: Save APK artifact
       uses: actions/upload-artifact@v4.3.1
