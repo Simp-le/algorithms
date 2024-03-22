@@ -10,6 +10,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env: 
+      BASE_URL: ${{ secrets.BASE_URL }}
 
     steps:
     - name: Checkout
@@ -20,9 +22,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: gradle
-
-    - name: Set BASE_URL secret as an environment variable
-      run: echo "BASE_URL=${{ secrets.BASE_URL }}" >> $GITHUB_ENV
 
     - name: Print BASE_URL
       run: echo "BASE_URL is $BASE_URL"
