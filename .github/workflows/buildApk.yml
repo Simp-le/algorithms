@@ -8,6 +8,9 @@ on:
 
 env:
   BASE_URL: ${{ secrets.BASE_API }}
+  path: ./
+  artifact_name: Calculators
+  file_name : Calculators.apk
 
 jobs:
   build:
@@ -28,14 +31,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleRelease
 
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.3.1
+    - name: Save a Build Artifact
+      uses: actions/upload-artifact@v4
       with:
-        name: Calculators
-        path: ${{ github.workspace }}/apks
-
-    - name: Save APK artifact
-      uses: actions/download-artifact@v4.1.4
-      with:
-        name: Calculators
-        path: ${{ github.workspace }}/apks
+        name: ${{ env.artifact_name }}
+        path: ${{ env.path }}${{ env.file_name }}
