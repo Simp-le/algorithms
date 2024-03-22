@@ -10,6 +10,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env: 
+      BASE_URL: ${{ secrets.BASE_URL }}
 
     steps:
     - name: Checkout
@@ -23,9 +25,6 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-      
-    - name: Load BASE_URL secret
-      run: echo "::set-env name=BUILD_URL::${{ secrets.BASE_URL }}"
       
     - name: Build with Gradle
       run: ./gradlew assembleRelease
