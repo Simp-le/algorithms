@@ -28,6 +28,11 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleRelease
 
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.1
+      with:
+        name: Calculators
+
     - name: Save APK artifact
       uses: actions/download-artifact@v4.1.4
       with:
