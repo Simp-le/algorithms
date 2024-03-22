@@ -36,7 +36,7 @@ android {
         release {
             buildConfigField(
                 "String", "BASE_URL",
-                System.getenv("BASE_URL") ?: "\"http://188.225.38.67:30201/api/\""
+                System.getenv("BASE_URL")
             )
             isMinifyEnabled = false
             proguardFiles(
@@ -48,7 +48,7 @@ android {
         debug {
             buildConfigField(
                 "String", "BASE_URL",
-                System.getenv("BASE_URL") ?: "\"http://188.225.38.67:30201/api/\""
+                System.getenv("BASE_URL")
             )
             isMinifyEnabled = false
             proguardFiles(
