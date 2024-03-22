@@ -36,7 +36,7 @@ android {
         release {
             buildConfigField(
                 "String", "BASE_URL",
-                System.getenv("BASE_URL")
+                "${System.getenv("BASE_URL")}"
             )
             isMinifyEnabled = false
             proguardFiles(
@@ -48,7 +48,7 @@ android {
         debug {
             buildConfigField(
                 "String", "BASE_URL",
-                System.getenv("BASE_URL")
+                "${System.getenv("BASE_URL")}"
             )
             isMinifyEnabled = false
             proguardFiles(
