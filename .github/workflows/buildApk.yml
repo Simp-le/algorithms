@@ -29,7 +29,6 @@ jobs:
       run: ./gradlew assembleRelease
 
     - name: Save APK artifact
-      uses: actions/upload-artifact@v4.3.1
+      uses: actions/download-artifact@v4.1.4
       with:
         name: Calculators
-        path: ${{ github.workspace }}/apk_files
