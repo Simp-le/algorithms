@@ -7,7 +7,7 @@ plugins {
     id("com.chaquo.python")
 
     id("com.google.devtools.ksp")
-    kotlin("kapt")
+    // kotlin("kapt")
 }
 
 android {
@@ -58,11 +58,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -110,8 +110,8 @@ dependencies {
     // Dagger - Hilt (deep injections)
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("com.google.dagger:hilt-android:2.51")
-    kapt("com.google.dagger:hilt-compiler:2.51")
-    kapt("androidx.hilt:hilt-compiler:1.2.0")
+    ksp("com.google.dagger:hilt-compiler:2.51")
+    ksp("androidx.hilt:hilt-compiler:1.2.0")
 
     // Retrofit (Api calls)
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
@@ -122,5 +122,6 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-paging:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
 }
