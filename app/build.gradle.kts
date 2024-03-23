@@ -7,7 +7,7 @@ plugins {
     id("com.chaquo.python")
 
     id("com.google.devtools.ksp")
-    // kotlin("kapt")
+    kotlin("kapt")
 }
 
 android {
@@ -110,8 +110,8 @@ dependencies {
     // Dagger - Hilt (deep injections)
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("com.google.dagger:hilt-android:2.51")
-    ksp("com.google.dagger:hilt-compiler:2.51")
-    ksp("androidx.hilt:hilt-compiler:1.2.0")
+    kapt("com.google.dagger:hilt-compiler:2.51")
+    kapt("androidx.hilt:hilt-compiler:1.2.0")
 
     // Retrofit (Api calls)
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
