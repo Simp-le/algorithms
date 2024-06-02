@@ -51,7 +51,7 @@ class AlgorithmListViewModel @Inject constructor(
                     is Result.Success -> {
                         result.data?.let { algorithmList ->
                             _algorithmListState.update {
-                                it.copy(algorithmList = algorithmList)
+                                it.copy(algorithmList = algorithmList, errorMessage = "")
                             }
                         }
                     }

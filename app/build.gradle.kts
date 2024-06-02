@@ -93,7 +93,7 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    // implementation(libs.androidx.material3)
+    implementation(libs.androidx.material3)
     testImplementation(libs.junit)
     testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
     testImplementation("io.mockk:mockk:1.13.10")
@@ -103,9 +103,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-    // CircularProgressIndicator
-    implementation("androidx.compose.material3:material3:1.2.0-rc01")
 
     // Dagger - Hilt (deep injections)
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
