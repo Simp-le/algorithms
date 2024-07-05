@@ -6,7 +6,6 @@ The application uses MVVM architecture. Algorithmic tasks can be solved both via
 For offline work, the Chaquopy library was used to work with python files.
 
 # Screenshots
-
 Main page:
 
 ![image](https://github.com/Simp-le/algorithms/assets/40547696/b76ce773-13f9-4370-816d-90b3276d8bd0)
